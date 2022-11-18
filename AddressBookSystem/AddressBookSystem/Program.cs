@@ -6,10 +6,11 @@ namespace AddressBook
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Address Book:- \n");
+            Console.WriteLine("Welcome to Address Book:- ");
 
-            Console.WriteLine("Create Contact Details:- ");
+           
             Contact contact = new Contact();
+            Console.WriteLine("Enter contact Details:- ");
             Console.Write("Enter  FirstName: ");
             contact.FirstName = Console.ReadLine();
             Console.Write("Enter  LastName: ");
@@ -24,11 +25,8 @@ namespace AddressBook
             contact.Zip = Convert.ToInt64(Console.ReadLine());
             Console.Write("Enter  PhoneNumber: ");
             contact.PhoneNumber = Console.ReadLine();
-            Console.Write("Enter  Email:\n ");
+            Console.Write("Enter  Email: ");
             contact.Email = Console.ReadLine();
-
-            AddressMain addressMain = new AddressMain();
-            addressMain.AddContact();
         }
     }
 }
