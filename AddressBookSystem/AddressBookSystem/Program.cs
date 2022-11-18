@@ -28,8 +28,9 @@
             }
             Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
 
-            AddressMain addressBook = new AddressMain();
-            addressBook.AddContact();
+            AddressMain addressMain = new AddressMain();
+            //addressMain.CreateContact();
+            addressMain.EditContact("xz");         
         }
     }
 }
