@@ -10,6 +10,7 @@ namespace AddressBookSystem
     {
         Contact contact = new Contact();
         List<Contact> address = new List<Contact>();
+        Dictionary<string, List<Contact>> dictionary = new Dictionary<string, List<Contact>>();
 
         public void Display()
         {
@@ -90,5 +91,24 @@ namespace AddressBookSystem
                 address.Remove(deleteContact);
             }
         }
+        public void DictionaryContact()
+        {
+            Console.WriteLine("Enter Name To add Addressbook");
+            string name = Console.ReadLine();
+            AddressMain.Add(name, address);
+            address = new List<Contact>();
+        }
+        public void DisplayDict()
+        {
+            foreach (var data in dictionary)
+            {
+                Console.WriteLine(data.Key);
+                foreach (var contact in data.Value)
+                {
+                    Console.WriteLine(contact.FirstName + "\n" + contact.LastName + "\n" + contact.Address + "\n" + contact.City + "\n" + contact.State + "\n" + contact.Zip + "\n" + contact.PhoneNumber + "\n" + contact.Email);
+                }
+            }
+        }
+
     }
 }

@@ -32,8 +32,8 @@
             //addressMain.CreateContact();
             //addressMain.EditContact(edit);
             addressMain.DeleteContact("FirstName");
-
-
+            addressMain.DictionaryContact();
+            addressMain.DictionaryContact();
         }
     }
 }
