@@ -30,7 +30,10 @@
 
             AddressMain addressMain = new AddressMain();
             //addressMain.CreateContact();
-            addressMain.EditContact("xz");         
+            //addressMain.EditContact(edit);
+            addressMain.DeleteContact("FirstName");
+
+
         }
     }
 }

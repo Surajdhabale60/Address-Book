@@ -43,7 +43,7 @@ namespace AddressBookSystem
             {
                 if ((contact.FirstName.Equals(name)) || (contact.LastName.Equals(name)))
                 {
-  
+
                     Console.WriteLine("1.FirstName 2.LastName 3.Address 4.City 5.State 6.Zip 7.PhoneNumber 8.Email");
                     int option = Convert.ToInt32(Console.ReadLine());
                     switch (option)
@@ -75,6 +75,19 @@ namespace AddressBookSystem
                     }
                     Display();
                 }
+            }
+        }
+        public void DeleteContact(string name)
+        {
+            Contact deleteContact = new Contact();
+            foreach (var contact in address)
+            {
+
+                if (contact.FirstName.Equals(name) || contact.LastName.Equals(name))
+                {
+                    deleteContact = contact;
+                }
+                address.Remove(deleteContact);
             }
         }
     }
